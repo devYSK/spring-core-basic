@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 import java.lang.annotation.Annotation;
 
@@ -30,6 +31,7 @@ public class StatefulServiceTest {
 //        Assertions.assertThat(statefulService1.getPrice()).isEqualTo(20000);
     }
 
+    @Component
     static class TestConfig {
         @Bean
         public StatefulService statefulService() {
